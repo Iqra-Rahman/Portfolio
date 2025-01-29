@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.body {
+    background-color: rgb(2, 9, 18);
+    width: 100%;
+    height: 70vw;
+    overflow: hidden;
+}
+
+/* .nav {
+  background-color: rgb(2, 9, 30);
+  border-bottom: 0.5px solid rgba(245, 245, 245, 0.201);
+  display: flex;
+  justify-content: space-between;
+} */
+
+.logo {
+    font-family: 'Roboto', serif;
+    font-weight: 700;
+    right: 30px;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    width: 50%;
+    height: 100%;
+    padding-left: 50px;
+    display: flex;
+
+}
+
+.menu ul {
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    color: aliceblue;
+}
+
+
+.menu li {
+    list-style: none;
+}
+
+.gitProfile img {
+    background-color: aquamarine;
+    height: 100%;
+    width: 65px;
+}
+
+.main {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    color: aliceblue;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.photo {
+    width: 253px;
+    height: 252px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    position: absolute;
+    right: 145px;
+    top: 152px;
+}
+
+.pfp {
+    background-image: url('WhatsApp Image 2025-01-28 at 8.33.58 PM.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.pfp:hover {
+    box-shadow: 0 0 20px 5px hsla(29, 54%, 57%, 0.79), 0 0 40px 10px hsl(162, 100%, 23%);
+}
+
+.info {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    top: 138px;
+    left: 136px;
+    width: 552px;
+    background-color: rgb(7, 22, 67, 0.5);
+    border-radius: 40px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.info:hover {
+    box-shadow: 0 0 20px 5px hsl(205, 97%, 25%), 0 0 40px 10px hsl(205, 97%, 25%);
+    transform: scale(1.05);
+}
+
+.name {
+    position: absolute;
+    top: 29px;
+    height: 137px;
+    left: 69px;
+}
+
+.name h2 {
+    color: #5c77ff;
+    /* Default text color */
+    background: linear-gradient(to right, #96cdf2, #0454ff);
+    -webkit-mask-image: linear-gradient(to right, #96cdf2, #0454ff);
+    -webkit-mask-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-img {
+    position: relative;
+    top: 153px;
+}
+
+.fade-img {
+    width: 100%;
+    height: auto;
+    -webkit-mask-image: linear-gradient(to top, transparent, black 20%);
+    mask-image: linear-gradient(to top, transparent, black 148%);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.desc {
+    font-size: small;
+    position: absolute;
+    bottom: 9px;
+    width: 80%;
+    height: 119px;
+    font-size: x-small;
+    left: 70px;
+}
+
+.skills {
+    position: relative;
+    top: 70px;
+}
+
+.skillCards h2 {
+    color: aliceblue;
+    font-weight: 700;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.cards {
+    background-color: black;
+    padding: 20px;
+    border-radius: 30px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.cards p {
+    font-size: small;
+}
+
+.cards:hover {
+    box-shadow: 0 0 20px 5px hsl(214, 89%, 22%), 0 0 40px 10px hsl(214, 89%, 22%);
+    transform: scale(1.05);
+}
+
+.line1 {
+    top: 34px;
+    left: 187px;
+    height: 0.5px;
+}
+
+
+
+.footer {
+    position: relative;
+    bottom: -143px;
+    font-size: smaller;
+}
+

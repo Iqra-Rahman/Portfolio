@@ -1,0 +1,31 @@
+.contact-me{
+    background-color: rgb(2, 9, 18);
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact{
+    background-color: #033e8b44 ;
+    width: 70%;
+    height: 70px;
+    margin-bottom: 30px;
+    display: flex;
+    padding: 20px;
+    padding-left: 50px;
+    align-items: center ;
+    gap: 40px;
+    color: aliceblue;
+    border-radius: 30px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.contact:hover{
+    box-shadow: 0 0 20px 5px hsl(205, 97%, 25%), 0 0 40px 10px hsl(205, 97%, 25%);
+    transform: scale(1.05);
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}

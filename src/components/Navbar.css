@@ -1,0 +1,20 @@
+.nav {
+    background-color: rgb(2, 9, 30);
+    border-bottom: 0.5px solid rgba(245, 245, 245, 0.201);
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu ul a {
+    text-decoration: none;
+    color: white; /* Default text color */
+}
+  .menu ul a.active {
+    font-weight: bold;
+    color: rgb(31, 171, 206); /* Optional: Change color to highlight */
+}
