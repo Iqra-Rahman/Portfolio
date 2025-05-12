@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.avif
+WhatsApp*  
