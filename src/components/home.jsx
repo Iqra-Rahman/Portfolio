@@ -65,7 +65,7 @@ const Home = () => {
       <div className="sidebar">
         <div className="avatar">
           {/* Replace with your photo */}
-          <img src="public/images/Generated Image August 31, 2025 - 7_39PM.jpeg" alt="Iqra Rahman" />
+          <img src="/images/Generated Image August 31, 2025 - 7_39PM.jpeg" alt="Iqra Rahman" />
         </div>
         <h2 className="name">Iqra Rahman</h2>
         <p className="role">Student</p>
