@@ -1,36 +1,37 @@
-import './App.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Home from './components/home'
-import Projects from './components/Projects'
-import Certificates from './components/Certificates'
-import Contact from './components/Contact'
+import { useState, useEffect } from "react";
+import SplashScreen from "./components/SplashScreen.jsx";
+import HomePage from "./HomePage.jsx";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element:<><Navbar/><Home/></>
-    },
-    {
-      path: "/projects",
-      element:<><Navbar/><Projects/></>
-    },
-    {
-      path: "/certificates",
-      element:<><Navbar/><Certificates/></>
-    },
-    {
-      path: "/contact",
-      element:<><Navbar/><Contact/></>
-    },
-  ])
+  const [showSplash, setShowSplash] = useState(true);
+  const [fadeIn, setFadeIn] = useState(false);
+
+  useEffect(() => {
+    if (!showSplash) {
+      setTimeout(() => setFadeIn(true), 50);
+    }
+  }, [showSplash]);
 
   return (
     <>
-      <div className="appBody"><RouterProvider router={router}/></div>
+     <div className="device-message">
+        For the best view, try opening on larger screen.
+      </div>
+    <div className="min-h-screen transition-colors duration-700 bg-black">
+      {showSplash ? (
+        <SplashScreen onFinish={() => setShowSplash(false)} />
+      ) : (
+        <div
+          className={`transition-opacity duration-700 ${
+            fadeIn ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <HomePage />
+        </div>
+      )}
+    </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css'
+import {FaGithub} from "react-icons/fa";
 
 const Navbar = () => {
 
@@ -15,13 +16,19 @@ const Navbar = () => {
                     <ul>
                         <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
                         <li><Link to="/projects" className={location.pathname === '/projects' ? 'active' : ''}>Projects</Link></li>
-                        <li><Link to="/certificates" className={location.pathname === '/certificates' ? 'active' : ''}>Certificates</Link></li>
+                        <li><Link to="/resume" className={location.pathname === '/resume' ? 'active' : ''}>Resume</Link></li>
+                        {/* <li><Link to="/certificates" className={location.pathname === '/certificates' ? 'active' : ''}>Certificates</Link></li> */}
                         <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact me</Link></li>
+                        {/* <li><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                                <FaGithub size={30}/>
+                              </a></li> */}
 
                     </ul>
-                    <div className="gitProfile">
-                        <a href="https://github.com/Iqra-Rahman"><img src="https://images.sftcdn.net/images/t_app-icon-m/p/5fa45cf4-9a9b-11e6-861a-00163ec9f5fa/629080884/github-logo" alt="gitHub" /></a>
-                    </div>
+                    {/* <div className="gitProfile">
+                        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                                <FaGithub />
+                              </a>
+                    </div> */}
                 </div>
             </div>
         </div>

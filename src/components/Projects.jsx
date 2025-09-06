@@ -1,47 +1,84 @@
-import React from 'react'
-import './Projects.css'
+
+import React from "react";
+import "./Projects.css";
 
 const Projects = () => {
+  const projectData = [
+    {
+      title: "AI Powered Chatbot",
+      description:
+        "An AI-driven medical assistant built to provide users with instant, informative, and conversational healthcare guidance.",
+      img: "images/Screenshot 2025-09-05 202906.png",
+      demo: "https://medi-bot-vtdi.onrender.com/",
+      details: "https://github.com/Iqra-Rahman/Medi-Bot",
+    },
+    {
+      title: "TODO APP",
+      description:
+        "A lightweight and intuitive task manager that allows you to add tasks, mark them as completed, and delete them when no longer needed. Clean, distraction-free, and designed to help you stay organized.",
+      img: "images/Screenshot 2025-09-05 205715.png",
+      demo: "https://todo-app-six-beta-49.vercel.app/",
+      details: "https://github.com/Iqra-Rahman/TODO-APP",
+    },
+    {
+      title: "Music Website (Spotify Clone)",
+      description:
+        "A responsive Spotify-inspired music website with a clean design, interactive controls, and a seamless user experience across all devices.",
+      img: "images/Screenshot 2025-09-05 210130.png",
+      demo: "",
+      details: "https://github.com/Iqra-Rahman/Music-Website-SpotifyClone-",
+    },
+    {
+      title: "Movie Recommendation Model",
+      description:
+        "A model that suggests movies by analyzing genres, casts, directors etc. Uses Scikit-learn for vectorization and cosine similarities to compute distance between feature vectors.",
+      img: "images/Generated Image September 05, 2025 - 8_46PM.jpeg",
+      demo: "",
+      details: "https://github.com/Iqra-Rahman/Movie-Recommendation-Engine---Machine-Learning-",
+    },
+    {
+      title: "Resume Recommendation Model",
+      description:
+        "A machine learning model that recommends the best resume format based on job descriptions. Utilizes NLP techniques to analyze and match key skills and qualifications.",
+      img: "images/Generated Image September 05, 2025 - 8_51PM.jpeg",
+      demo: "",
+      details: "https://github.com/Iqra-Rahman/Resume-Recommendation",
+    },
+  ];
+
   return (
-    <div className='myProjects'>
-      <div className="movie_recommendation project">
-        <div className="project_desc">
-          <h2 className='pb-4'>Movie Recommendation Model</h2>
-          <p>The aim of the model is to suggest user movies by analyzing the genres, casts, directors etc based on the example movie they provide.
-            <br />The model uses Scikit-learn for vectorization and cosine similarities to compute distance between feature vectors.
-          </p>
+    <div className="myProjects">
+      {projectData.map((project, index) => (
+        <div className="projectCard" key={index}>
+          <img src={project.img} alt={project.title} className="projectImage" />
+          <h2 className="projectTitle">{project.title}</h2>
+          <p className="projectDesc">{project.description}</p>
+          <div className="projectBtns">
+            {project.demo && project.demo.trim() !== "" ? (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btnActive"
+              >
+                Live Demo
+              </a>
+            ) : (
+              <span className="btnDisabled">Live Demo</span>
+            )}
+            <a
+              href={project.details}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btnActive"
+            >
+              Details →
+            </a>
+          </div>
         </div>
-        <div className="project_img">
-          <img className="project_img" src="movie_recom-img.jpg" alt="project preview" />
-        </div>
-      </div>
-
-      <div className="todo project">
-        <div className="project_desc">
-          <h2 className='pb-4'>TODO APP</h2>
-          <p>Enable users to schedule their daily tasks. <br />
-          The app maintains a clean and easy-to-use interface so users can focus on their tasks without distractions. <br />
-          It uses react's various hooks, like useState() and useRef().
-          </p>
-        </div>
-        <div className="project_img">
-          <img className="project_img" src="todo_img.webp" alt="project preview" />
-        </div>
-      </div>
-
-      <div className="music project">
-        <div className="project_desc">
-          <h2 className='pb-4'>Music Website</h2>
-          <p>The goal of the project is to create visually appealing and responsive music website with the help of HTML, CSS and Javascript. <br />
-          The website is not completed yet.
-          </p>
-        </div>
-        <div className="project_img">
-          <img className="project_img" src="music_img.avif" alt="project preview" />
-        </div>
-      </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

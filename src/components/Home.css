@@ -1,191 +1,171 @@
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-.body {
-    background-color: rgb(2, 9, 18);
-    width: 100%;
-    height: 70vw;
-    overflow: hidden;
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(2, 9, 18);
+  /* Dark background */
+  color: #f5f5f5;
+
 }
 
-/* .nav {
-  background-color: rgb(2, 9, 30);
-  border-bottom: 0.5px solid rgba(245, 245, 245, 0.201);
+/* Main Container */
+.home-container {
   display: flex;
-  justify-content: space-between;
-} */
-
-.logo {
-    font-family: 'Roboto', serif;
-    font-weight: 700;
-    right: 30px;
-    width: 15%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  min-height: 100vh;
 }
 
-.menu {
-    width: 50%;
-    height: 100%;
-    padding-left: 50px;
-    display: flex;
-
+/* Sidebar (Profile Section) */
+.sidebar {
+  width: 28%;
+  /* height: 80%; */
+  background: rgb(7, 14, 30);
+  padding: 3rem 3.5rem;
+  text-align: center;
+  border: -1.5px solid #0b1444dd;
+  border-radius: 10%;
+  margin: 30px;
+  background: linear-gradient(135deg, #2e3e44, #0d1c21, #000000);
 }
 
-.menu ul {
-    width: 100%;
-    height: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    display: flex;
-    color: aliceblue;
+.sidebar img {
+  width: 200px;
+  height: 200px;
+  border-radius: 17%;
+  /* border: 3px solid #0a58ca; */
+  margin-bottom: 1rem;
+  transition: 0.3s;
+  margin-left: 40px;
+  object-fit: cover;
+}
+
+.sidebar img:hover {
+  box-shadow: 0 0 20px #0a58ca;
+  transform: scale(1.05);
+}
+
+.line {
+  width: 80%;
+  height: 1px;
+  background-color: #0a58ca;
+  margin: 35px auto;
+}
+
+.sidebar h2 {
+  margin: 1rem 0;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.sidebar p.role {
+  color: #e6e8e9;
+  font-weight: 200;
+  background-color: #74beff36;
+  border-radius: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 63%;
+  height: 39px;
+  margin-left: 50px
 }
 
 
-.menu li {
-    list-style: none;
+.contact-info {
+  margin-left: 1.4rem;
+  display: block;
+  text-align-last: start;
 }
 
-.gitProfile img {
-    background-color: aquamarine;
-    height: 100%;
-    width: 65px;
+.contact-info p,
+.contact-info a {
+  /* margin: 0.4rem 0; */
+  color: #ddd;
+  font-size: 0.9rem;
+  text-decoration: none;
 }
 
-.main {
-    width: 100%;
-    height: 400px;
-    display: flex;
-    color: aliceblue;
-    justify-content: space-around;
-    align-items: center;
+.contact-info .type {
+  color: #7998c6;
+  font-weight: 600;
+  margin-bottom: -1px;
+  /* margin-top: 20px; */
 }
 
-.photo {
-    width: 253px;
-    height: 252px;
-    background-color: aliceblue;
-    border-radius: 50%;
-    position: absolute;
-    right: 145px;
-    top: 152px;
+.contact-info a:hover {
+  color: #0a58ca;
 }
 
-.pfp {
-    background-image: url('WhatsApp Image 2025-01-28 at 8.33.58 PM.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+.social-icons {
+  /* margin-top: 1.5rem; */
+  margin-left: -1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.pfp:hover {
-    box-shadow: 0 0 20px 5px hsla(29, 54%, 57%, 0.79), 0 0 40px 10px hsl(162, 100%, 23%);
+/* Right Content */
+.content {
+  flex: 1;
+  padding: 1.5rem;
+  margin-top: 2.5rem;
 }
 
-.info {
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    position: absolute;
-    top: 138px;
-    left: 136px;
-    width: 552px;
-    background-color: rgb(7, 22, 67, 0.5);
-    border-radius: 40px;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+.content h2 {
+  color: #5b82a9;
+  margin-bottom: 1rem;
+  font-size: x-large;
+  font-weight: 700;
 }
 
-.info:hover {
-    box-shadow: 0 0 20px 5px hsl(205, 97%, 25%), 0 0 40px 10px hsl(205, 97%, 25%);
-    transform: scale(1.05);
+/* About Section */
+.about {
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
-.name {
-    position: absolute;
-    top: 29px;
-    height: 137px;
-    left: 69px;
+.about p {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 4rem;
+  padding-right: 3rem;
 }
 
-.name h2 {
-    color: #5c77ff;
-    /* Default text color */
-    background: linear-gradient(to right, #96cdf2, #0454ff);
-    -webkit-mask-image: linear-gradient(to right, #96cdf2, #0454ff);
-    -webkit-mask-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.bg-img {
-    position: relative;
-    top: 153px;
-}
-
-.fade-img {
-    width: 100%;
-    height: auto;
-    -webkit-mask-image: linear-gradient(to top, transparent, black 20%);
-    mask-image: linear-gradient(to top, transparent, black 148%);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-}
-
-.desc {
-    font-size: small;
-    position: absolute;
-    bottom: 9px;
-    width: 80%;
-    height: 119px;
-    font-size: x-small;
-    left: 70px;
-}
-
-.skills {
-    position: relative;
-    top: 70px;
-}
-
-.skillCards h2 {
-    color: aliceblue;
-    font-weight: 700;
-    font-size: large;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
+/* Services / What I'm Doing */
+.services h2 {
+  margin-bottom: 1.2rem;
 }
 
 .cards {
-    background-color: black;
-    padding: 20px;
-    border-radius: 30px;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.cards p {
-    font-size: small;
+.card {
+  background: rgb(15 16 20);
+  padding: 1.5rem;
+  border-radius: 15px;
+  width: 280px;
+  border-top: groove;
+  transition: 0.3s;
 }
 
-.cards:hover {
-    box-shadow: 0 0 20px 5px hsl(214, 89%, 22%), 0 0 40px 10px hsl(214, 89%, 22%);
-    transform: scale(1.05);
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px #0a58ca55;
 }
 
-.line1 {
-    top: 34px;
-    left: 187px;
-    height: 0.5px;
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: #66b2ff;
+  font-size: 1.2rem;
 }
 
-
-
-.footer {
-    position: relative;
-    bottom: -143px;
-    font-size: smaller;
+.line2 {
+  width: 80%;
+  height: 2px;
+  background-color: #3c577e;
+  margin: -1rem 0 2rem 0;
 }
-

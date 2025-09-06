@@ -1,0 +1,126 @@
+/* Tablets - below 1024px */
+@media (max-width: 1024px) {
+  .home-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 90%;
+    margin: 1rem auto;
+    border-radius: 20px;
+  }
+  .content {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+  .certificate {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+    padding: 1rem;
+  }
+  .role, .preview {
+    width: 100%;
+    height: auto;
+  }
+  .resume-container {
+    width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+  .contact-body {
+    padding: 4rem 1rem;
+  }
+}
+
+/* Mobiles - below 768px */
+@media (max-width: 768px) {
+  .sidebar img {
+    width: 150px;
+    height: 150px;
+    margin-left: 0;
+  }
+  .sidebar h2 {
+    font-size: 1.5rem;
+  }
+  .certificate_desc {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .resume-main-title {
+    font-size: 1.8rem;
+  }
+  .resume-title {
+    font-size: 1.2rem;
+  }
+  .projectImage {
+    height: 150px;
+  }
+  .projectBtns {
+    flex-direction: column;
+  }
+  .contact-container {
+    padding: 1.5rem;
+  }
+  .contact-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Small mobiles - below 480px */
+@media (max-width: 480px) {
+  .sidebar {
+    padding: 1.5rem;
+  }
+  .sidebar img {
+    width: 120px;
+    height: 120px;
+  }
+  .sidebar p.role {
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    margin-left: 0;
+  }
+  .about p {
+    padding-right: 0;
+    font-size: 0.9rem;
+  }
+  .card {
+    width: 100%;
+  }
+  .projectTitle {
+    font-size: 1.1rem;
+  }
+  .projectDesc {
+    font-size: 0.85rem;
+  }
+  .contact-link {
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+.device-message {
+  display: none; /* hidden by default */
+  background: #0265b7;
+  color: white;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Show message only on screens below 1024px */
+@media (max-width: 1024px) {
+  .device-message {
+    display: block;
+  }
+}
