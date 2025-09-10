@@ -25,7 +25,7 @@ const Projects = () => {
       description:
         "A responsive Spotify-inspired music website with a clean design, interactive controls, and a seamless user experience across all devices.",
       img: "/images/Screenshot 2025-09-05 210130.png",
-      demo: "",
+      demo: "https://music-website-spotify-clone-five.vercel.app/",
       details: "https://github.com/Iqra-Rahman/Music-Website-SpotifyClone-",
     },
     {
